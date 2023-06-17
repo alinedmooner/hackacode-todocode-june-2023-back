@@ -1,8 +1,11 @@
 import express from "express";
+import dotenv from "dotenv";
 import customers from "../example_data/customers.mjs";
 import employees from "../example_data/employees.mjs";
 
-const port = 5273;
+dotenv.config();
+
+const port = process.env.PORT || 5000;
 
 const app = express();
 
