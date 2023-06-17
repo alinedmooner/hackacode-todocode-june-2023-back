@@ -16,6 +16,7 @@
     "eslint-config-manzdev": "^0.0.2"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mongoose": "^7.3.0"
   }
 }

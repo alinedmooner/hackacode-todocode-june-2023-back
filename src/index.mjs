@@ -1,9 +1,12 @@
 import express from "express";
 import dotenv from "dotenv";
+import connectDB from "./config/db.mjs";
 import customers from "../example_data/customers.mjs";
 import employees from "../example_data/employees.mjs";
 
 dotenv.config();
+
+connectDB();
 
 const port = process.env.PORT || 5000;
 
