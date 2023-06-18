@@ -1,8 +1,8 @@
 import express from "express";
 import dotenv from "dotenv";
-import connectDB from "./config/db.mjs";
-import customers from "../example_data/customers.mjs";
-import employees from "../example_data/employees.mjs";
+import connectDB from "./config/db.js";
+import customers from "../example_data/customers.js";
+import employees from "../example_data/employees.js";
 
 dotenv.config();
 
