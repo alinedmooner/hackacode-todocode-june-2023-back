@@ -12,15 +12,15 @@ const port = process.env.PORT || 5000;
 
 const app = express();
 
-app.get("/", (req, res) => {
+app.get("/api/", (req, res) => {
   res.send("Hello World!");
 });
 
-app.get("/customers", (req, res) => {
+app.get("/api/customers", (req, res) => {
   res.json(customers);
 });
 
-app.get("/employees", (req, res) => {
+app.get("/api/employees", (req, res) => {
   res.json(employees);
 });
 
