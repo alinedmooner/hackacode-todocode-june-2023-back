@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import customers from "../example_data/customers.js";
 import employeeRoutes from "./routes/employeeRoutes.js";
+import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 
 dotenv.config();
 
@@ -21,6 +22,10 @@ app.get("/api/customers", (req, res) => {
 });
 
 app.use("/api/employees", employeeRoutes);
+
+app.use(notFound);
+
+app.use(errorHandler);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
