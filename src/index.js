@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import customers from "../example_data/customers.js";
-import employees from "../example_data/employees.js";
+import employeeRoutes from "./routes/employeeRoutes.js";
 
 dotenv.config();
 
@@ -20,9 +20,7 @@ app.get("/api/customers", (req, res) => {
   res.json(customers);
 });
 
-app.get("/api/employees", (req, res) => {
-  res.json(employees);
-});
+app.use("/api/employees", employeeRoutes);
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
