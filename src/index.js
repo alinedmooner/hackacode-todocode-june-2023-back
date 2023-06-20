@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import connectDB from "./config/db.js";
 import customers from "../example_data/customers.js";
 import employeeRoutes from "./routes/employeeRoutes.js";
-import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
+import { notFound, errorHandler } from "./middlewares/errorMiddleware.js";
 
 dotenv.config();
 

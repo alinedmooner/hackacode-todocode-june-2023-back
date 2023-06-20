@@ -1,12 +1,8 @@
 import express from "express";
-import asyncHandler from "../middleware/asyncHandler.js";
-import Employee from "../models/employeeModel.js";
+import { getEmployees } from "../controllers/employeeController.js";
 
 const router = express.Router();
 
-router.get("/", asyncHandler(async (req, res) => {
-  const employees = await Employee.find({});
-  res.json(employees);
-}));
+router.route("/").get(getEmployees);
 
 export default router;
