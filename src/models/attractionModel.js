@@ -1,38 +1,38 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose'
 
 const attractionSchema = mongoose.Schema(
-  { 
+  {
     category: {
       type: String,
-      required: true,
+      required: true
     },
     name: {
       type: String,
-      required: true,
+      required: true
     },
     price: {
       type: Number,
-      required: true,
+      required: true
     },
     startTime: {
       type: String,
-      required: true,
+      required: true
     },
     endTime: {
       type: String,
-      required: true,
+      required: true
     },
     image: {
       type: String,
-      required: true,
+      required: true
     },
     description: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   }
-);
+)
 
-const Attraction = mongoose.model("Attraction", attractionSchema);
+const Attraction = mongoose.model('Attraction', attractionSchema)
 
-export default Attraction;
+export default Attraction
