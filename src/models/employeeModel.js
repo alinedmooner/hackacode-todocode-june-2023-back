@@ -1,8 +1,12 @@
 import mongoose from "mongoose";
-import Attraction from "./attractionModel";
+
 
 const employeeSchema = mongoose.Schema(
   {
+    name: {
+      type: String,
+      required: true,
+    },
     email: {
       type: String,
       required: true,
@@ -12,16 +16,17 @@ const employeeSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    name: {
-      type: String,
-      required: true,
-    },
     isAdministrator: {
       type: Boolean,
       required: true,
       default: false,
     },
-    attractions: [Attraction],
+    attractions: [String],
+    categories: [String],
+    image: {
+      type: String,
+      required: true,
+    }
   },
   {
     timestamps: true,

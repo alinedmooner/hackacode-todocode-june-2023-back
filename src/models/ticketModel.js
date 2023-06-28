@@ -2,16 +2,18 @@ import mongoose from "mongoose";
 
 const ticketSchema = mongoose.Schema(
   {
-    customer: {
-      type: mongoose.Schema.Types.ObjectId,
+    name: {
+      type: String,
       required: true,
-      ref: "Customer",
     },
-    attraction: {
-      type: mongoose.Schema.Types.ObjectId,
+    customerName: {
+      type: String,
       required: true,
-      ref: "Attraction",
     },
+    customerEmail: {
+      type: String,
+      required: true,
+    },    
   },
   {
     timestamps: true,
