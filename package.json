@@ -5,7 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "sow:customers": "node src/config/seeders/sowCustomers.js",
+    "sow:attractions": "node src/config/seeders/sowAttractions.js",
+    "sow:categories": "node src/config/seeders/sowCategories.js",
+    "sow:employees": "node src/config/seeders/sowEmployees.js"
   },
   "keywords": [
     "API"
@@ -13,11 +17,13 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "colors": "^1.4.0",
     "dotenv": "^16.3.1",
     "eslint": "^8.43.0",
-    "nodemon": "^2.0.22"
+    "nodemon": "^1.14.9"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "express": "^4.18.2",
     "mongoose": "^7.3.1"
   }
